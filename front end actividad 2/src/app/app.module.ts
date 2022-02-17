@@ -18,6 +18,7 @@ import { PipeSeguro, ReproductorYoutubeComponent } from './components/reproducto
 import { ListaReproduccionYoutubeComponent } from './components/reproductor-youtube/lista-reproduccion-youtube/lista-reproduccion-youtube.component';
 import { VideosComponent } from './components/videos/videos.component';
 import { LibroComponent } from './components/libros/libro/libro.component';
+import { VideojuegosComponent } from './videojuegos/videojuegos.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { LibroComponent } from './components/libros/libro/libro.component';
     ListaReproduccionYoutubeComponent,
     PipeSeguro,
     VideosComponent,
-    LibroComponent
+    LibroComponent,
+    VideojuegosComponent
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,7 @@ import { LibrosComponent } from "./components/libros/libros.component";
 import { ErrorComponent } from "./components/error/error.component";
 import { PodcastsComponent } from "./components/podcasts/podcasts.component";
 import { VideosComponent } from "./components/videos/videos.component";
+import { VideojuegosComponent } from "./videojuegos/videojuegos.component";
 
 export const appRoutes: Routes= [
     {path: '', component: InicioComponent},
@@ -18,6 +19,7 @@ export const appRoutes: Routes= [
     {path: 'libros', component: LibrosComponent} ,
     {path: 'podcasts', component: PodcastsComponent},
     {path: 'videos', component: VideosComponent},
+    {path: 'videjuegos', component: VideojuegosComponent},
     {path: '**', component: ErrorComponent}
 ];
 

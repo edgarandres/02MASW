@@ -15,25 +15,25 @@ public cancionReproducida: Cancion = new Cancion(0, '','','');
 
   constructor() { 
     this.discos = [
-      new Disco("Greatest hits","the beatles","1987",'https://commons.wikimedia.org/wiki/File:The_Fabs.JPG',[
-        new Cancion(1,'Hollywood','the beatles','https://cdn.pixabay.com/download/audio/2022/01/31/audio_0f2416122a.mp3?filename=dont-you-think-lose-16073.mp3'),
-        new Cancion(2,'Yellow submarine','the beatles','https://cdn.pixabay.com/download/audio/2022/01/31/audio_0f2416122a.mp3?filename=dont-you-think-lose-16073.mp3'),
-        new Cancion(3,'Imagine','the beatles','https://cdn.pixabay.com/download/audio/2022/01/31/audio_0f2416122a.mp3?filename=dont-you-think-lose-16073.mp3')
+      new Disco("Greatest hits","The Beatles","1987",'https://picsum.photos/200/300?grayscale',[
+        new Cancion(1,'Hollywood','The Beatles','https://cdn.pixabay.com/download/audio/2022/01/26/audio_d0c6ff1bdd.mp3?filename=the-cradle-of-your-soul-15700.mp3'),
+        new Cancion(2,'Yellow submarine','The Beatles','https://cdn.pixabay.com/download/audio/2022/01/26/audio_d0c6ff1bdd.mp3?filename=the-cradle-of-your-soul-15700.mp3'),
+        new Cancion(3,'Imagine','The Beatles','https://cdn.pixabay.com/download/audio/2022/01/26/audio_d0c6ff1bdd.mp3?filename=the-cradle-of-your-soul-15700.mp3')
       ]),
-      new Disco("Greatest hits","queens",'1989','https://commons.wikimedia.org/wiki/File:The_Fabs.JPG',[
-        new Cancion(1,'Hollywood','the beatles','https://cdn.pixabay.com/download/audio/2022/01/31/audio_0f2416122a.mp3?filename=dont-you-think-lose-16073.mp3'),
-        new Cancion(2,'Yellow submarine','the beatles','https://cdn.pixabay.com/download/audio/2022/01/31/audio_0f2416122a.mp3?filename=dont-you-think-lose-16073.mp3'),
-        new Cancion(3,'Imagine','the beatles','https://cdn.pixabay.com/download/audio/2022/01/31/audio_0f2416122a.mp3?filename=dont-you-think-lose-16073.mp3')
+      new Disco("Greatest hits","Queen",'1989','https://picsum.photos/200/300/?blur',[
+        new Cancion(1,'Hollywood','Queen','https://cdn.pixabay.com/download/audio/2022/01/26/audio_d0c6ff1bdd.mp3?filename=the-cradle-of-your-soul-15700.mp3'),
+        new Cancion(2,'Yellow submarine','Queen','https://cdn.pixabay.com/download/audio/2022/01/26/audio_d0c6ff1bdd.mp3?filename=the-cradle-of-your-soul-15700.mp3'),
+        new Cancion(3,'Imagine','Queen','https://cdn.pixabay.com/download/audio/2022/01/26/audio_d0c6ff1bdd.mp3?filename=the-cradle-of-your-soul-15700.mp3')
       ]),
-      new Disco("Greatest hits","The Cranberries",'1997','https://commons.wikimedia.org/wiki/File:The_Fabs.JPG',[
-        new Cancion(1,'Hollywood','the beatles','https://cdn.pixabay.com/download/audio/2022/01/31/audio_0f2416122a.mp3?filename=dont-you-think-lose-16073.mp3'),
-        new Cancion(2,'Yellow submarine','the beatles','https://cdn.pixabay.com/download/audio/2022/01/31/audio_0f2416122a.mp3?filename=dont-you-think-lose-16073.mp3'),
-        new Cancion(3,'Imagine','the beatles','https://cdn.pixabay.com/download/audio/2022/01/31/audio_0f2416122a.mp3?filename=dont-you-think-lose-16073.mp3')
+      new Disco("Greatest hits","The Cranberries",'1997','https://picsum.photos/id/870/200/300?grayscale&blur=2',[
+        new Cancion(1,'Hollywood','The Cranberries','https://cdn.pixabay.com/download/audio/2022/01/26/audio_d0c6ff1bdd.mp3?filename=the-cradle-of-your-soul-15700.mp3'),
+        new Cancion(2,'Yellow submarine','The Cranberries','https://cdn.pixabay.com/download/audio/2022/01/26/audio_d0c6ff1bdd.mp3?filename=the-cradle-of-your-soul-15700.mp3'),
+        new Cancion(3,'Imagine','The Cranberries','https://cdn.pixabay.com/download/audio/2022/01/26/audio_d0c6ff1bdd.mp3?filename=the-cradle-of-your-soul-15700.mp3')
       ]),
-      new Disco("Greatest hits","The Doors",'1982','https://commons.wikimedia.org/wiki/File:The_Fabs.JPG',[
-        new Cancion(1,'Hollywood','the beatles','https://cdn.pixabay.com/download/audio/2022/01/31/audio_0f2416122a.mp3?filename=dont-you-think-lose-16073.mp3'),
-        new Cancion(2,'Yellow submarine','the beatles','https://cdn.pixabay.com/download/audio/2022/01/31/audio_0f2416122a.mp3?filename=dont-you-think-lose-16073.mp3'),
-        new Cancion(3,'Imagine','the beatles','https://cdn.pixabay.com/download/audio/2022/01/31/audio_0f2416122a.mp3?filename=dont-you-think-lose-16073.mp3')
+      new Disco("Greatest hits","The Doors",'1982','https://picsum.photos/200/300.jpg',[
+        new Cancion(1,'Hollywood','The Doors','https://cdn.pixabay.com/download/audio/2022/01/26/audio_d0c6ff1bdd.mp3?filename=the-cradle-of-your-soul-15700.mp3'),
+        new Cancion(2,'Yellow submarine','The Doors','https://cdn.pixabay.com/download/audio/2022/01/26/audio_d0c6ff1bdd.mp3?filename=the-cradle-of-your-soul-15700.mp3'),
+        new Cancion(3,'Imagine','The Doorss','https://cdn.pixabay.com/download/audio/2022/01/26/audio_d0c6ff1bdd.mp3?filename=the-cradle-of-your-soul-15700.mp3')
       ]),
     ]
   }
@@ -45,7 +45,7 @@ public cancionReproducida: Cancion = new Cancion(0, '','','');
     console.log('Quiero reproducir la cancion: ', cancion)
     this.cancionReproducida = cancion;
     let audioPlayer = document.getElementById("audioPlayer") as HTMLAudioElement;
-    audioPlayer?.setAttribute('src', cancion.ruta);
+    audioPlayer.setAttribute('src', cancion.ruta);
     audioPlayer.play();
   }
 }
