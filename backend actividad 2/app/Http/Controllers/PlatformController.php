@@ -23,7 +23,7 @@ class PlatformController extends Controller
             $platforms = Platform::orderBy('name', 'ASC')->paginate(self::PAGINATE_SIZE);
         }
 
-        return view('platforms.index', ['platforms'=>$platforms]);
+        return view('platforms.index', ['platforms'=>$platforms, 'platformName'=>$platformName]);
     }
 
     public function create(){
