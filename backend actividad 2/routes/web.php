@@ -17,10 +17,10 @@ Route::get('/', function () {
 
 Route::prefix('platforms')->group(function(){
     Route::get('/', 'PlatformController@Index')->name('platforms.index');
-    Route::post('/create', 'PlatformController@create')->name('platforms.create');
+    Route::get('/create', 'PlatformController@create')->name('platforms.create');
     Route::post('/store', 'PlatformController@store')->name('platforms.store');
-    Route::put('/{platform}/edit', 'PlatformController@edit')->name('platforms.edit');
-    Route::put('/{platform}/update', 'PlatformController@update')->name('platforms.update');
+    Route::get('/{platform}/edit', 'PlatformController@edit')->name('platforms.edit');
+    Route::post('/{platform}/update', 'PlatformController@update')->name('platforms.update');
     Route::delete('/{platform}/delete', 'PlatformController@delete')->name('platforms.delete');
 });
 

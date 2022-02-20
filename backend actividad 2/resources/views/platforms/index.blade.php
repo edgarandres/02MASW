@@ -1,7 +1,12 @@
+
+@push('styles')
+    <link href="{{ asset('css/common.css') }}" rel="stylesheet">
+@endpush
+
 @extends('layouts.main')
 
 @section('title')
-    {{__('strings.platform_index_title')}}')
+    {{__('strings.platform_index_title')}})
 @endsection
 
 @section('content')
@@ -18,6 +23,7 @@
             </div>
         </div>
     </div>
+    </div>
 <!-- Formulario de busqueda
    <div class="card-body">
         <div class="col-md-6">
@@ -30,41 +36,42 @@
         </div>
     </div> -->
 
-</div>
+
 
 <div class="table-responsive mt-3">
     @if(count($platforms)>0)
         <table class="table table-striped align-items-center table-flush">
             <thead class="thead-light">
                 <th>{{__('strings.id_header')}}</th>
-                <th>{{__('strings.name_header')}}</th>
+                <th>{{__('strings.platform_name_header')}}</th>
                 <th>{{__('strings.actions_header')}}</th>
             </thead>
             <tbody>
-                @foreach($paltforms as $platform)
+                @foreach($platforms as $platform)
                     <tr>
                         <td>
-                            {{platform->id}}
+                            {{$platform->id}}
                         </td>
                         <td>
-                            {{platform->name}}
+                            {{$platform->name}}
                         </td>
                         <td>
-                            <a href="{{route('platfoms.edit', $platform)}}">
-                                <i class="fa fa-edit"></i>
-                            </a>
-                            &nbsp;&nbsp;&nbsp;
-                            <form id="delete-form-{{$platform->id}}"
-                                action="{{route('platforms.delete', [$platform])}}"
-                                method="POST" style="display: index-block;">
-                                {{method_field('delete')}}
-                                {{cerf_field()}}
-                                <a href="javascript:void(0);"
-                                    onlick="event.preventDefault()
-                                    document.getElementById('delete-form-{{$platform->id}}').submit()">
-                                    <i class="fa fa-trash-alt"></i>
-                                </a>
-                            </form>
+                            <div class="btn-group" role="group" style="width:100%">
+                                <button class="btn btn-success" href="{{ route('platforms.edit', $platform) }}">
+                                    {{__('strings.edit_btn')}}                            
+                                </button>
+                                <form id="delete-form-{{$platform->id}} class="delete-btn"
+                                    action="{{ route('platforms.delete', [$platform])}}"
+                                    method="POST" style="display: index-block;">
+                                    {{ method_field('delete') }}
+                                    {{ csrf_field() }}
+                                    <button class="btn btn-danger" href="javascript:void(0);"
+                                        onlick="event.preventDefault()
+                                        document.getElementById('delete-form-{{$platform->id}}').submit()">
+                                        {{__('strings.delete_btn')}}    
+                                    </button>
+                                </form>
+                            </div>
                         </td>
                     </tr>
                 @endforeach

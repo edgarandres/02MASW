@@ -3,20 +3,22 @@
 return [
 
     'home_title' => 'Biblioteca de series',
-    'plattform_index_title' => 'Listado de Plataformas',
-    'no_platforms' => 'No existen plataformas',
     'id_header' => 'ID',
-    'name_header' => 'Nombre de la plataforma',
     'actions_header' => 'Acciones',
-    'list_title' => 'Listado de plataformas',
-    'create_title' => 'Crear plataforma',
-    'edit_title' => 'Editar plataforma',
-    'name_placeholder' => 'Introduce el nombre de la plataforma',
     'create_btn' => 'Crear',
     'save_btn' => 'Guardar',
     'edit_btn' => 'Editar',
     'delete_btn' => 'Borrar',
     'search_btn' => 'Buscar',
+
+    'list_title' => 'Listado de plataformas',
+    'edit_title' => 'Editar plataforma',
+    'name_placeholder' => 'Introduce el nombre de la plataforma',
+    'platform_name_header' => 'Nombre de la plataforma',
+    'plattform_index_title' => 'Listado de Plataformas',
+    'no_platforms' => 'No existen plataformas',
+    'create_title' => 'Crear plataforma',
+    'create_platforms' => 'Crear plataforma',
     'search_platform_name_placeholder' => 'Nombre de la plataforma a buscar...',
     '' => ''
 ];
