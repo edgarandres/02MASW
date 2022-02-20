@@ -47,7 +47,7 @@ class PlatformController extends Controller
     public function delete(Platform $platform){
         if($platform!=null){
             $platform->delete();
-            return redirect()->route('platforms.index')->with('error', Lang::get('alerts.platforms_deleted_successfully'));
+            return redirect()->route('platforms.index')->with('success', Lang::get('alerts.platform_deleted_successfully'));
         }
         return redirect()->route('platforms.index')->with('error', Lang::get('alerts.platforms_deleted_error'));
     }
