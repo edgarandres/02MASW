@@ -10,10 +10,19 @@ use Illuminate\Support\Facades\Lang;
 
 class PlatformController extends Controller
 {
-    const PAGINATE_SIZE = 10;
+    const PAGINATE_SIZE = 5;
 
-    public function index(){
-        $platforms = Platform::paginate(self::PAGINATE_SIZE);
+    public function index(Request $request){
+        $platformName = null;
+        if($request->has('platformName')){
+            $platformName = $request->platformName;
+            $platforms = Platform::where('name', 'like', '%'.$platformName . '%')
+            ->orderBy('name', 'ASC')->paginate(self::PAGINATE_SIZE);
+
+        }else{
+            $platforms = Platform::orderBy('name', 'ASC')->paginate(self::PAGINATE_SIZE);
+        }
+
         return view('platforms.index', ['platforms'=>$platforms]);
     }
 

@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Route::prefix('platforms')->group(function(){
-    Route::get('/', 'PlatformController@Index')->name('platforms.index');
+    Route::match(['get', 'post'], '/', 'PlatformController@Index')->name('platforms.index');
     Route::get('/create', 'PlatformController@create')->name('platforms.create');
     Route::post('/store', 'PlatformController@store')->name('platforms.store');
     Route::get('/{platform}/edit', 'PlatformController@edit')->name('platforms.edit');

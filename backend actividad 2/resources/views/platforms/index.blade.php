@@ -20,7 +20,6 @@
             </div>
         </div>
     </div>
-    <!-- Formulario de busqueda
     <div class="card-body">
             <div class="col-md-6">
                 <form action="" method="POST">
@@ -30,7 +29,7 @@
                     <button type="submit" class="btn btn-primary">{{__('strings.search_btn')}}</button>
                 </form>
             </div>
-        </div> -->
+        </div> 
 
 
 
