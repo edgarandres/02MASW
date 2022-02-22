@@ -21,7 +21,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Plataformas</h5>
                                     <p class="card-text">Listado y gestión de plataformas creadas en BBDD.</p>
-                                    <a class="btn btn-primary" href="{{route('platform.index')}}">Listado de plataformas</a>
+                                    <a class="btn btn-primary" href="{{route('platforms.index')}}">Listado de plataformas</a>
                                     </div>
                                 </div>
                             </div>
@@ -30,7 +30,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Plataformas</h5>
                                     <p class="card-text">Listado y gestión de plataformas creadas en BBDD.</p>
-                                    <a class="btn btn-primary" href="{{route('platform.index')}}">Listado de plataformas</a>
+                                    <a class="btn btn-primary" href="{{route('platforms.index')}}">Listado de plataformas</a>
                                     </div>
                                 </div>
                             </div>
@@ -39,7 +39,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Plataformas</h5>
                                     <p class="card-text">Listado y gestión de plataformas creadas en BBDD.</p>
-                                    <a class="btn btn-primary" href="{{route('platform.index')}}">Listado de plataformas</a>
+                                    <a class="btn btn-primary" href="{{route('platforms.index')}}">Listado de plataformas</a>
                                     </div>
                                 </div>
                             </div>

@@ -11,6 +11,7 @@ return [
     'platform_updated_successfully' => 'Plataforma modificada correctamente',
     'platform_deleted_successfully' => 'Plataforma borrada correctamente',
     'platform_deleted_error' => 'Plataforma no borrada correctamente',
+    'autentication_error' >= 'Credenciales inválidas'
 
 
 ];

@@ -24,6 +24,14 @@ Route::prefix('platforms')->group(function(){
     Route::delete('/{platform}/delete', 'PlatformController@delete')->name('platforms.delete');
 });
 
+Route::get('/home', function () {
+    return view('welcome');
+});
+
+Route::get('/home', 'HomeController@index')->name('welcome');
+
+Auth::routes();
+
 /*
 Route::view('/welcome', 'welcome', ['name' => 'Pedro', 'surname' => 'Martinez']);
 
@@ -55,6 +63,3 @@ Route::midleware(['first', 'second'])->group(function() {
 
 /*Prefijos*/
 /*Route::prefix(¿'users)*/
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
