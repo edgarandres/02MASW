@@ -55,3 +55,6 @@ Route::midleware(['first', 'second'])->group(function() {
 
 /*Prefijos*/
 /*Route::prefix(¿'users)*/
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
