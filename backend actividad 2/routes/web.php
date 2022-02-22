@@ -13,9 +13,9 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->middleware('auth');
 
-Route::prefix('platforms')->group(function(){
+Route::prefix('platforms')->middleware('auth')->group(function(){
     Route::match(['get', 'post'], '/', 'PlatformController@Index')->name('platforms.index');
     Route::get('/create', 'PlatformController@create')->name('platforms.create');
     Route::post('/store', 'PlatformController@store')->name('platforms.store');
@@ -26,10 +26,12 @@ Route::prefix('platforms')->group(function(){
 
 Route::get('/home', function () {
     return view('welcome');
-});
+})->middleware('auth');
 
-
+// Agrega las rutas de autenticación
 Auth::routes();
+
+
 
 /*
 Route::view('/welcome', 'welcome', ['name' => 'Pedro', 'surname' => 'Martinez']);
