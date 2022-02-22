@@ -12,12 +12,12 @@
 
     </head>
 
-        <body>
+<body>
             <div class="flex-center position-ref full-height">
                     <div id="app" class="content">
                             @include('partials.alerts')
                             @yield('content')
                     </div>
-</div>
+            </div>
 </body>
 </html> 

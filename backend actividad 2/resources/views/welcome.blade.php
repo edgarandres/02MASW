@@ -49,4 +49,14 @@
             </div>
         </div>
     </div>
+           <div>
+                 <div class="card-body">
+                    <form name="logout" action="{{route('logout')}}" method="POST">
+                        @csrf
+                        <input type="submit" 
+                            value="{{__('strings.logout_btn')}}" class="btn btn-primary" name="logoutBtn"/>                        
+                    </form>
+                </div>
 </div>                                                            
+@endsection
+

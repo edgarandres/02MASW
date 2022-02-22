@@ -10,6 +10,7 @@ return [
     'edit_btn' => 'Editar',
     'delete_btn' => 'Borrar',
     'search_btn' => 'Buscar',
+    'logout_btn' => 'Finalizar sesión',
 
     'list_title' => 'Listado de plataformas',
     'edit_title' => 'Editar plataforma',

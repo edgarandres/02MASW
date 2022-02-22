@@ -18,7 +18,6 @@ class PlatformController extends Controller
             $platformName = $request->platformName;
             $platforms = Platform::where('name', 'like', '%'.$platformName . '%')
             ->orderBy('name', 'ASC')->paginate(self::PAGINATE_SIZE);
-
         }else{
             $platforms = Platform::orderBy('name', 'ASC')->paginate(self::PAGINATE_SIZE);
         }
@@ -41,7 +40,7 @@ class PlatformController extends Controller
     }
 
     public function edit(Platform $platform){
-      //  dd($platform->all());
+        //dd($platform->all());
         return view('platforms.store', ['platform' => $platform]);
     }
 
