@@ -29,8 +29,8 @@ return [
     'director_iso_header'=>'ISO code',
     'iso_code'=>'ISO code',
     'title'=>'Directors',
-    'director_created_successfully' => 'Director Creado Correctamente',
-    'director_updated_successfully' => 'Director modificado correctamente',
-    'director_deleted_successfully' => 'Director borrado correctamente',
-    'director_deleted_error' => 'Director no borrado correctamente'
+    'director_created_successfully' => 'Created successfully',
+    'director_updated_successfully' => 'Updated successfully',
+    'director_deleted_successfully' => 'Deleted successfully',
+    'director_deleted_error' => 'Delete error'
 ];

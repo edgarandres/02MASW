@@ -7,10 +7,11 @@ use App\Platform;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Lang;
+use Illuminate\Validation\Rule;
 
 class PlatformController extends Controller
 {
-    const PAGINATE_SIZE = 5;
+    const PAGINATE_SIZE = 15;
 
     public function index(Request $request){
         $platformName = null;
@@ -21,7 +22,6 @@ class PlatformController extends Controller
         }else{
             $platforms = Platform::orderBy('name', 'ASC')->paginate(self::PAGINATE_SIZE);
         }
-
         return view('platforms.index', ['platforms'=>$platforms, 'platformName'=>$platformName]);
     }
 
@@ -30,13 +30,27 @@ class PlatformController extends Controller
     }
 
     public function store(Request $request){
-        $this->validatePlatform($request)->validate();
+        $this->validatePlatform($request, null)->validate();
 
         $platform = new Platform();
         $platform->name = $request->platformName;
         $platform->save();
 
-        return redirect()->route('platforms.index')->with('success', Lang::get('alerts.platform_created_successfully'));
+        return redirect()->route('platforms.index')->with('success', Lang::get('platform.platform_created_successfully'));
+    }
+
+    function validatePlatform($request, $platform){
+        return Validator::make($request->all(), [
+            'platformName' => ['required', 'string', 'max:255', 'min:3', Rule::unique('platforms','name')->ignore($platform)]
+        ]);
+    }
+
+    public function delete(Platform $platform){
+        if($platform!=null){
+            $platform->delete();
+            return redirect()->route('platforms.index')->with('success', Lang::get('platform.platform_deleted_successfully'));
+        }
+        return redirect()->route('platforms.index')->with('error', Lang::get('platform.platforms_deleted_error'));
     }
 
     public function edit(Platform $platform){
@@ -46,23 +60,9 @@ class PlatformController extends Controller
 
     public function update(Request $request, Platform $platform){
 
-        $this->validatePlatform($request)->validate();
+        $this->validatePlatform($request, $platform)->validate();
         $platform->name = $request->platformName;
         $platform->save();
-        return redirect()->route('platforms.index')->with('success', Lang::get('alerts.platform_updated_successfully'));
-    }
-
-    public function delete(Platform $platform){
-        if($platform!=null){
-            $platform->delete();
-            return redirect()->route('platforms.index')->with('success', Lang::get('alerts.platform_deleted_successfully'));
-        }
-        return redirect()->route('platforms.index')->with('error', Lang::get('alerts.platforms_deleted_error'));
-    }
-
-    function validatePlatform($request){
-        return Validator::make($request->all(), [
-            'platformName' => ['required', 'string', 'max:255', 'min:3']
-        ]);
+        return redirect()->route('platforms.index')->with('success', Lang::get('platform.platform_updated_successfully'));
     }
 }

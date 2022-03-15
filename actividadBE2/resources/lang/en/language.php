@@ -25,8 +25,8 @@ return [
     'language_iso_header'=>'ISO code',
     'iso_code'=>'ISO code',
     'title'=>'Languages',
-    'language_created_successfully' => 'Lenguaje Creado Correctamente',
-    'language_updated_successfully' => 'Lenguaje modificado correctamente',
-    'language_deleted_successfully' => 'Lenguaje borrado correctamente',
-    'language_deleted_error' => 'Lenguaje no borrado correctamente'
+    'language_created_successfully' => 'Created successfully',
+    'language_updated_successfully' => 'Updated successfully',
+    'language_deleted_successfully' => 'Deleted successfully',
+    'language_deleted_error' => 'Delete error'
 ];

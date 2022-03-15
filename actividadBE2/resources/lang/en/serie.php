@@ -36,8 +36,8 @@ return [
     'serie_iso_header'=>'ISO code',
     'iso_code'=>'ISO code',
     'title'=>'Series',
-    'serie_created_successfully' => 'Serie Creado Correctamente',
-    'serie_updated_successfully' => 'Serie modificado correctamente',
-    'serie_deleted_successfully' => 'Serie borrado correctamente',
-    'serie_deleted_error' => 'Serie no borrado correctamente'
+    'serie_created_successfully' => 'Created successfully',
+    'serie_updated_successfully' => 'Updated successfully',
+    'serie_deleted_successfully' => 'Deleted successfully',
+    'serie_deleted_error' => 'Delete error'
 ];

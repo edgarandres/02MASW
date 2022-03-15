@@ -23,8 +23,8 @@ return [
     'search_platform_name_placeholder' => 'Search platform ...',
     '' => '',
     'title'=>'Platforms',
-    'platform_created_successfully' => 'Plataforma Creada Correctamente',
-    'platform_updated_successfully' => 'Plataforma modificada correctamente',
-    'platform_deleted_successfully' => 'Plataforma borrada correctamente',
-    'platform_deleted_error' => 'Plataforma no borrada correctamente'
+    'platform_created_successfully' => 'Created successfully',
+    'platform_updated_successfully' => 'Updated successfully',
+    'platform_deleted_successfully' => 'Deleted successfully',
+    'platform_deleted_error' => 'Delete error'
 ];

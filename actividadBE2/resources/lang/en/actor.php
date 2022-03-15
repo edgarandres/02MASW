@@ -29,8 +29,8 @@ return [
     'actor_iso_header'=>'ISO code',
     'iso_code'=>'ISO code',
     'title'=>'Actors',
-    'actor_created_successfully' => 'Actor Creado Correctamente',
-    'actor_updated_successfully' => 'Actor modificado correctamente',
-    'actor_deleted_successfully' => 'Actor borrado correctamente',
-    'actor_deleted_error' => 'Actor no borrado correctamente'
+    'actor_created_successfully' => 'Created successfully',
+    'actor_updated_successfully' => 'Updated successfully',
+    'actor_deleted_successfully' => 'Deleted successfully',
+    'actor_deleted_error' => 'Delete error'
 ];

@@ -54,7 +54,13 @@
                                 <label for="exampleFormControlSelect1">{{__('serie.platform')}}</label>
                                 <select name="seriePlatform" class="form-control" id="exampleFormControlSelect1" required>
                                     @foreach ($platforms as $platform)
-                                    <option value="{{$platform->id}}">{{$platform->name}}</option>
+                                    <option value="{{$platform->id}}"
+                                        @isset($serie)
+                                            @if ($platform->id == old('seriePlatform', $serie->platform->id))
+                                                selected="selected"
+                                            @endif
+                                        @endisset
+                                    >{{$platform->name}}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -63,7 +69,13 @@
                                 <label for="exampleFormControlSelect1">{{__('serie.director')}}</label>
                                 <select name="serieDirector" class="form-control" id="exampleFormControlSelect1" required>
                                     @foreach ($directors as $director)
-                                    <option value="{{$director->id}}">{{$director->given_name.' '.$director->surnames}}</option>
+                                    <option value="{{$director->id}}"
+                                     @isset($serie)
+                                        @if ($director->id == old('serieDirector', $serie->director->id))
+                                            selected="selected"
+                                        @endif
+                                     @endisset
+                                    >{{$director->given_name.' '.$director->surnames}}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -72,7 +84,13 @@
                                 <label for="exampleFormControlSelect2">{{__('serie.select_actors')}}</label>
                                 <select name="serieActors[]" multiple class="form-control" id="exampleFormControlSelect2" required>
                                     @foreach ($actors as $actor)
-                                    <option value="{{$actor->id}}">{{$actor->given_name.' '.$actor->surnames}}</option>
+                                        <option value="{{$actor->id}}"
+                                            @isset($serie)
+                                                @if (old('serieActors[]', $serie->actors)){{
+                                                    (in_array($actor->id, old("serieActors[]", $serie->actors)->pluck('id')->all()) ? "selected":"")}}
+                                                @endIf
+                                            @endisset
+                                        >{{$actor->given_name.' '.$actor->surnames}}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -81,7 +99,13 @@
                                 <label for="exampleFormControlSelect2">{{__('serie.select_audios')}}</label >
                                 <select name="serieAudios[]" multiple class="form-control" id="exampleFormControlSelect2"required>
                                     @foreach ($languages as $language)
-                                    <option value="{{$language->id}}">{{$language->name}}</option>
+                                    <option value="{{$language->id}}"
+                                        @isset($serie)
+                                            @if (old('serieAudios[]', $serie->audioLanguages)){{
+                                                (in_array($language->id, old("serieAudios[]", $serie->audioLanguages)->pluck('id')->all()) ? "selected":"")}}
+                                            @endIf
+                                        @endisset
+                                    >{{$language->name}}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -90,7 +114,13 @@
                                 <label for="exampleFormControlSelect2">{{__('serie.select_subtitles')}}</label>
                                 <select name="serieSubtitles[]" multiple class="form-control" id="exampleFormControlSelect2" required>
                                     @foreach ($languages as $language)
-                                    <option value="{{$language->id}}">{{$language->name}}</option>
+                                    <option value="{{$language->id}}"
+                                        @isset($serie)
+                                            @if (old('serieSubtitles[]', $serie->subtitleLanguages)){{
+                                                (in_array($language->id, old("serieSubtitles[]", $serie->subtitleLanguages)->pluck('id')->all()) ? "selected":"")}}
+                                            @endIf
+                                        @endisset                                    
+                                    >{{$language->name}}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -111,3 +141,14 @@
         </div>
     </div>
 @endsection
+
+@section('myjsfile')
+    @isset($serie)
+        <script>
+        var values = "Test,Prof,Off", 
+        options = Array.from(document.querySelectorAll('#strings option'));
+
+        <script>
+    @endisset
+
+@stop

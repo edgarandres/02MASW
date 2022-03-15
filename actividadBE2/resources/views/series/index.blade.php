@@ -50,14 +50,14 @@
             </td>
             <td>
                 <ol>
-                    @foreach($serie['audioLanguage'] as $audio)
+                    @foreach($serie['audioLanguages'] as $audio)
                     <li>{{$audio->name}}</li>
                     @endforeach
                 </ol>
             </td>
             <td>
                 <ol>
-                    @foreach($serie['subtitleLanguage'] as $subtitle)
+                    @foreach($serie['subtitleLanguages'] as $subtitle)
                     <li>{{$subtitle->name}}</li>
                     @endforeach
                 </ol>
