@@ -45,14 +45,20 @@
                             </label>
 
                             <input id="serieName" name="serieName" type="text" placeholder="{{__('serie.name_placeholder')}}"
-                            class="form-control @error('serieName') is-invalid @enderror" required
+                            class="form-control @error('serieName') is-invalid @enderror required"
                                 @isset($serie) value="{{old('serieName', $serie->title)}}" @else value="{{old('serieName')}}"
                                 @endisset
                             />
 
                             <div class="form-group">
-                                <label for="exampleFormControlSelect1">{{__('serie.platform')}}</label>
-                                <select name="seriePlatform" class="form-control" id="exampleFormControlSelect1" required>
+                                <label for="seriePlatform">{{__('serie.platform')}}
+                                    @error('seriePlatform')
+                                        <strong style="color: red">{{__('strings.error_value')}}</strong>
+                                    @enderror
+                                </label>
+                                <select name="seriePlatform" class="form-control" id="formControlSelect1"
+                                class="form-control @error('seriePlatform') is-invalid @enderror required">
+                                <option disabled selected value> -- select an option -- </option>
                                     @foreach ($platforms as $platform)
                                     <option value="{{$platform->id}}"
                                         @isset($serie)
@@ -66,8 +72,14 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleFormControlSelect1">{{__('serie.director')}}</label>
-                                <select name="serieDirector" class="form-control" id="exampleFormControlSelect1" required>
+                                <label for="serieDirector">{{__('serie.director')}}
+                                    @error('serieDirector')
+                                        <strong style="color: red">{{__('strings.error_value')}}</strong>
+                                    @enderror                                
+                                </label>
+                                <select name="serieDirector" class="form-control" id="formControlSelect2" 
+                                    class="form-control @error('serieDirector') is-invalid @enderror required">
+                                    <option disabled selected value> -- select an option -- </option>
                                     @foreach ($directors as $director)
                                     <option value="{{$director->id}}"
                                      @isset($serie)
@@ -81,8 +93,13 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleFormControlSelect2">{{__('serie.select_actors')}}</label>
-                                <select name="serieActors[]" multiple class="form-control" id="exampleFormControlSelect2" required>
+                                <label for="serieActors">{{__('serie.select_actors')}}
+                                     @error('serieActors')
+                                        <strong style="color: red">{{__('strings.error_value')}}</strong>
+                                    @enderror                                 
+                                </label>
+                                <select name="serieActors[]" multiple class="form-control" id="formControlSelect3" 
+                                class="form-control @error('serieActors[]') is-invalid @enderror>
                                     @foreach ($actors as $actor)
                                         <option value="{{$actor->id}}"
                                             @isset($serie)
@@ -96,8 +113,13 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleFormControlSelect2">{{__('serie.select_audios')}}</label >
-                                <select name="serieAudios[]" multiple class="form-control" id="exampleFormControlSelect2"required>
+                                <label for="serieAudios">{{__('serie.select_audios')}}
+                                    @error('serieAudios')
+                                        <strong style="color: red">{{__('strings.error_value')}}</strong>
+                                    @enderror                                  
+                                </label >
+                                <select name="serieAudios[]" multiple class="form-control" id="formControlSelect4"
+                                class="form-control @error('serieAudios[]') is-invalid @enderror>
                                     @foreach ($languages as $language)
                                     <option value="{{$language->id}}"
                                         @isset($serie)
@@ -111,8 +133,13 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleFormControlSelect2">{{__('serie.select_subtitles')}}</label>
-                                <select name="serieSubtitles[]" multiple class="form-control" id="exampleFormControlSelect2" required>
+                                <label for="serieSubtitles">{{__('serie.select_subtitles')}}
+                                    @error('serieSubtitles')
+                                        <strong style="color: red">{{__('strings.error_value')}}</strong>
+                                    @enderror                                  
+                                </label>
+                                <select name="serieSubtitles[]" multiple class="form-control" id="formControlSelect5" 
+                                class="form-control @error('serieSubtitles[]') is-invalid @enderror>
                                     @foreach ($languages as $language)
                                     <option value="{{$language->id}}"
                                         @isset($serie)

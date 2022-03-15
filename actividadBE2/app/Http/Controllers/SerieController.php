@@ -111,6 +111,32 @@ class SerieController extends Controller
                 'required', 
                 'string',
                 Rule::unique('series','title')->ignore($serie)
+            ],
+            'seriePlatform' => [
+                'required',
+                'exists:platforms,id'
+            ],
+            'serieDirector' => [
+                'required',
+                'exists:directors,id'
+            ],
+            'serieActors' => [
+                'required'
+            ],
+            'serieAudios' => [
+                'required'
+            ],
+            'serieSubtitles' => [
+                'required'
+            ],
+            'serieActors.*' => [
+                'exists:actors,id'
+            ],
+            'serieAudios.*' => [
+                'exists:language_serie_audio,serie_id'
+            ],
+            'serieSubtitles.*' => [
+                'exists:language_serie_subtitle,language_id'
             ]
         ]);
     }
